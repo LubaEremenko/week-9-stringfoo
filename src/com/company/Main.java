@@ -1,12 +1,14 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        DemoOne();
-        DemoTwo();
-
+     //   DemoOne();
+      //  DemoTwo();
+        DemoTree();
 
     }
 
@@ -43,12 +45,56 @@ public class Main {
         String s3 = new String(charArray);
         String s4 = new String(charArray,6,3);
 
-
         System.out.printf("s1 = %s%ns2 =%s%ns3 = %s%ns4 = %s%n", s1,s2,s3,s4);
+
+    }
+
+    public static void DemoTree() {
+        //Scanner scanner = new Scanner(System.in);
+       //System.out.println("Please enter your full name: ");
+       // String fullName = scanner.nextLine();
+        String S1 = "Liubov Eremenko";
+
+        //length method of String returns the length of a String S1.
+        int length = S1.length();
+        System.out.println("Length of a full name is nn = " + length);
+
+        //is the alphabetical position of the first initial of name
+
+        class initials {
+
+            public void extractInitials(String name)
+            {
+                if (name.length() == 0)
+                    return;
+
+                 System.out.print(Character.toUpperCase(
+                        name.charAt(0)));
+
+
+                for (int i = 1; i < name.length() - 1; i++)
+                    if (name.charAt(i) == ' ')
+                        System.out.print(" " + Character.toUpperCase(name.charAt(i + 1)));
+
+                    name = "liubov eremenko";
+                extractInitials(name);
+            }
+        }
+
 
 
 
 
     }
+        }
 
-}
+
+
+
+
+
+
+
+
+
+
